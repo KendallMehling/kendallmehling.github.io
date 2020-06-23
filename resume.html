@@ -1,0 +1,418 @@
+<!DOCTYPE>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE and Edge */
+  body {
+    -ms-overflow-style: none;
+  }
+  .sides, .info{
+    flex: 0 0 auto;
+    width:50%
+  }
+
+  .meta{
+    font-style:italic;
+  }
+  @keyframes grow{
+    0% { transform: scale(1) translateY(0px)}
+    50% { transform: scale(1.2) translateY(-400px)}
+  }
+  .content{
+    padding:5% 10%;
+    text-align:justify
+  }
+  .btn{
+    color:#333;
+    border:2px solid;
+    border-radius:3px;
+    text-decoration:none;
+    display:inline-block;
+    padding:5px 10px;
+    font-weight:600
+  }
+
+  .twtr{
+    margin-top:100px
+  }.btn.twtr:after{content:"\1F426";padding-left:5px}
+
+  /* The sidepanel menu */
+  .sidepanel {
+    height: 200px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: absolute; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 55px;
+    left: 0;
+    background-color: #111a1; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    overflow: hidden;
+  }
+
+  /* The sidepanel links */
+  .sidepanel a {
+    position: static;
+    padding: 2px 2px 2px 2px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    background: transparent;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidepanel a:hover {
+    color: gray;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 0px;
+  }
+
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    position: absolute;
+    left: 0px;
+    top:0px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    width: 150px;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  body{
+    font-size: 20px;
+    }
+  body h1, h2, h3, h4, h5, h6{
+    line-height: 10px;
+  }
+  header h1,h2, h3, h4, h5, h6{
+    line-height: 35px;
+    margin-bottom: -12;
+    margin-top: -4;
+}
+
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.white-background{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 100%;
+}
+body{
+  background-repeat: no;
+}
+
+.resume-width{
+  width:85%;
+  margin-left:auto;
+  margin-right: auto;
+}
+}
+.header {
+    background-color: #FFCCCC;
+}
+
+.content {
+    background-color: #CCFFCC;
+}
+
+.res-footer {
+    background-color: black;
+    margin-top: 2cm;
+    margin-bottom: 0;
+    width: 100%;
+    color: white;
+    line-height: .2;
+    margin-bottom: .2;
+    height: 170px;
+
+}
+
+.icons a {
+  position: relative;
+  width:60px;
+  height:60px;
+  left: -7.2cm;
+  display:block;
+  text-align:center;
+  margin:0 2px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration:none;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+}
+.icons{
+  position:relative;
+  top:3.2cm;
+  transform: translate(-50%, -50%);
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ footer ul li {
+  list-style: none;
+}
+
+.icons a:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+ul li a .fa {
+  list-style: n
+  width: 90%;
+  height:90%;
+  display:block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size:24px;
+  color: #262626;
+  transition: .5s;
+}
+
+ul li:nth-child(1) a:hover .fa {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fa {
+  color: #fa4e2f;
+}
+
+ul li:nth-child(3) a:hover .fa {
+  color: #c3c9c9;
+}
+
+ul li:nth-child(4) a:hover .fa {
+  color: #000000;
+}
+
+
+.download{
+  position: relative;
+  float:right;
+  width: 100px;
+  height: 50px;
+}
+</style>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "150px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+
+<div class="header">
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="About_me.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="tutoring.html">Tutoring</a>
+  </div>
+
+  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+
+
+<div class="white-background">
+<div class="container">
+<div class="resume-width">
+<br>
+<header>
+  <h1 align=center style="margin-bottom:-20">Kendall J. Mehling<h1><br>
+  <h2 align=center style="margin-bottom:-20">Kendallm@uchicago.edu<h2><br>
+  <h2 align=center>(423) 994-1834</h2>
+  </h1>
+  <br>
+</header>
+<body>
+  <div class="page-wrap">
+
+  <h2>EDUCATION</h2>
+  <hr>
+  <div>
+    <h3 style="display: block-inline; float:left">University of Chicago</h3>
+    <h3 style="display: block-inline; float:right">Chicago, IL</h3>
+  </div>
+  <br>
+  <div>
+  <h5 style="display: block-inline; float:left">Bachelor of Arts in Physics (Honors) and Mathematics</h5>
+  <h5 style="display: block-inline; float:right"><em>Expected, June 2020</em></h5>
+  </div>
+  <br>
+  <ul>
+    <li>GPA: 3.7, GRE Quantitative: 168, GRE Verbal: 165, ACT: 35</li>
+    <li>Relevant Courses: Computer Science, Quantum Mechanics I/II, Experimental Physics I-III</li>
+  </ul>
+<h2>WORK EXPERIENCE</h2>
+<hr>
+  <div>
+  <h3 style="display: block-inline; float:left">University of Chicago Physics Department</h3>
+  <h3 style="display: block-inline; float:right">Chicago, IL</h3>
+  </div>
+  <br>
+  <div>
+    <h5 style="display: block-inline; float:left">Particle Physics Research Assistant</h5>
+    <h5 style="display: block-inline; float:right"><em>January 2019 – Present</em></h5>
+  </div>
+  <br>
+<ul>
+  <li>Simulated kaon decays in search of theoretical dark photon using GEANT4 package</li>
+  <li>Wrote analysis code isolating decay events of interest and compared them to background processes</li>
+  <li>Implemented deep learning algorithms to assist neutron discrimination to optimize background events</li>
+</ul>
+
+<div>
+  <h3 style="display: block-inline; float:left">University of Chicago Physics REU</h3>
+  <h3 style="display: block-inline; float:right">Chicago, IL</h3>
+</div>
+<br>
+<div>
+  <h5 style="display: block-inline; float:left">Research Assistant</h5>
+  <h5 style="display: block-inline; float:right"><em>June 2019 – August 2019</em></h5>
+</div>
+<br>
+<ul>
+  <li>Investigated the photon inefficiency of KOTO E14 detector over a range of gamma energies
+  <li>Used GEANT4 to simulate photon decays and analysis packages to determine appropriate timing conditions for veto detectors
+  <li>Presented research finding to colleagues and Chicago faculty at physics symposium
+</ul>
+<div>
+<h3 style="display: block-inline; float:left">University of Chicago Geophysics Researcher</h3>
+<h3 style="display: block-inline; float:right">Chicago, IL</h3>
+</div>
+<br>
+<div>
+<h5 style="display: block-inline; float:left">Geophysics Researcher</h5>
+<h5 style="display: block-inline; float:right"><em>June 2018 – September 2019</em></h5>
+</div>
+<br>
+<ul>
+  <li>Explored applicability of Rooth models to ocean circulation and ongoing stratification</li>
+  <li>Analyzed computational models and their stability using Midway supercomputer clusters</li>
+  <li>Applied the MITgcm to construct climatological experiments to investigate ongoing climate change</li>
+</ul>
+<div>
+<h3 style="display: block-inline; float:left">Yerkes Observatory</h3>
+<h3 style="display: block-inline; float:right">Williams Bay, WI</h3>
+</div>
+<br>
+<div>
+<h5 style="display: block-inline; float:left">IDATA Undergraduate Researcher</h5>
+<h5 style="display: block-inline; float:right"><em>June 2017 – August 2019</em></h5>
+</div>
+<br>
+<ul>
+  <li>Developed accessible physics lesson plans for classrooms across the United States</li>
+  <li>Collected data in Chicagoland area to produce accessible imaging software for high school students</li>
+  <li>Implemented education research to engage blind and visually impaired students with science education</li>
+</ul>
+
+<h2>EXTRACURRICULAR ACTIVITIES</h2>
+<hr>
+
+<div>
+<h3 style="display: block-inline; float:left">Metrosquash</h3>
+<h3 style="display: block-inline; float:right">Chicago, IL</h3>
+</div>
+<br>
+<div>
+<h5 style="display: block-inline; float:left">Tutor</h5>
+<h5 style="display: block-inline; float:right"><em>September 2016 – May 2019</em></h5>
+</div>
+<br>
+<ul>
+  <li>Assisted Chicagoland students with mathematics and science work at a local afterschool center</li>
+</ul>
+<h2>HONORS</h2>
+<hr>
+<ul>
+  <li>QuestBridge Scholar: recipient of fully funded undergraduate education at the University of Chicago</li>
+  <li>UCISTEM Research Grant: awarded funds for STEM summer research</li>
+  <li>Odyssey Scholar: member of UC network for first generation and low-income students</li>
+</ul>
+<h2>SKILLS AND INTERESTS</h2>
+<hr>
+
+<p style="margin:0">Computing: Python, C++, MATLAB, R, Linux, Windows, Microsoft Office, machine learning
+<p style="margin:0">Interests: Triathlon, chess, rock climbing, traveling
+</div>
+<br>
+</div>
+<footer class="res-footer">
+    <br>
+    <ul style="float: left; margin-left: -34px; margin-top: 0px">
+      <li><p>Email: Kendallm@uchicago.edu</p></li>
+      <li><p>Phone: (423) 994-1834
+        <li><p>Organization: Colorado Boulder Graduate School</p></li>
+      </ul>
+    <div>
+      <ul class="icons" style="float: left">
+        <li><a href="https://www.facebook.com/kendall.mehling.7"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/kendallmehling/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/KendallMehling"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="download">
+      <a href="Mehling_Resume.pdf" download>
+        <img style="margin-top: 1cm;"src="images/pdf.png" height= 100px width= 65px title="Download PDF">
+      </div>
+  </footer>
+
+
+</div>
+</div>
+
+
+
+
+</html>

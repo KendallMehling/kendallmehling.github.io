@@ -1,0 +1,50 @@
+.nav{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+.navbar {
+  position: sticky;
+  top:0 ;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+}
+
+.navbottom {
+  position:sticky:
+  bottom:0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%
+}
+
+ul {
+  list-style-type: none;
+  position:sticky;
+}
+/* Style the links inside the navigation bar */
+.navbar a,img {
+  position: sticky;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  position: sticy;
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
