@@ -1,14 +1,15 @@
-!DOCTYPE hmtl>
+<!DOCTYPE hmtl>
 
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tutoring</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
 <link rel="stylesheet" href="stylesheets/menu_style.css">
 <link rel="stylesheet" href="stylesheets/Social_Media_buttons.css">
+<link rel="stylesheet" href="stylesheets/panel_style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -28,67 +29,55 @@
   }
 body{
   background-image: url("images/mountain.jpeg");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-
-
-.panel-default {
- border-color: transparent;
+.title{
+  font-size: 42px;
+  text-align: center;
 }
-
-
-.panel{
- background-color: transparent;
-}
-
-.panel-default>.panel-heading+.panel-collapse>.panel-body {
-   border-top-color: rgba(0, 0, 0, 0);
-   background-color: rgba(0,0,0, .7);
-   border-radius: 1%;
-   margin-left: 1.7cm;
-}
-
-.panel-default>.panel-heading{
- background-color: transparent;
-}
-
-.panel-title{
- color: white;
- position: relative;
- left: 7cm;
- margin-bottom: .25cm;
- margin-top: .5cm;
- width: 50%;
-}
-
-.panel-body{
-    color: white;
-    position: relative;
-    left: 6cm;
-    width: 70%;
-}
-
 
 body {
   background-color: white;
   color: black;
 }
 
-
-.calendar {
-  height: 300px;
-  width: 100%;;
+.footer{
+  background-color: black; 
+  width:100%; 
+  height: 2.5cm; 
+  position: absolute;
+  font-size: 16px; 
+  bottom: 0cm;
 }
-
-
+  .footer-list{
+  padding-left:.2cm; 
+  margin-bottom: -1.7cm;
+  color: #f2ca79; 
+  margin-top: .5cm;
+  }
+@media only screen and (max-width: 700px) {
+  .title{
+    font-size: 32px;
+    text-align: center;
+  }
+ 
+  .footer{
+    font-size: 10px;
+  }
+}
 </style>
-
-
 
 <script>
   function openNav() {
-    document.getElementById("mySidepanel").style.width = "150px";
+    var x = window.matchMedia("(max-width: 450px)")
+    if (x.matches){
+      document.getElementById("mySidepanel").style.width = "80px";
+    }
+    else{
+      document.getElementById("mySidepanel").style.width = "150px";
+    }
   }
 
   /* Set the width of the sidebar to 0 (hide it) */
@@ -101,35 +90,34 @@ body {
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
     <a href="About_me.html">About Me</a>
-    <a href="resume.html">Resume</a>
+    <!-- <a href="resume.html">Resume</a> -->
     <a href="tutoring.html">Tutoring</a>
   </div>
 
   <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
 
-
 <body>
-  <h2 class="title" style="font-size: 42px" align=center>About Me</h2>
+  <h2 class="title">Tutoring</h2>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size: 24px">My Edge</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">My Edge</a>
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body" style="font-size: 17px">I teach from <strong style="font-size: 20px">EXPERIENCE</strong>. Recently, I was the student studying for classwork and juggling
+        <div class="panel-body">I teach from <strong>EXPERIENCE</strong>. Recently, I was the student studying for classwork and juggling
         standardized exams. Throughout my education, I have witness how critically vital individualized instruction is in student advancement. My goal is simple: Teach for success.</div>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="font-size: 24px">What I Teach</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">What I Teach</a>
         </h4>
       </div>
       <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body" style="font-size: 17px; list-style-type: circle">I focus on my strengths to deliver optimal results. My subject areas include:
+        <div class="panel-body" style="list-style-type: circle">I focus on my strengths to deliver optimal results. My subject areas include:
         <ul style="margin-left: .3cm;"><li>Physics</li><li>Math</li><li>ACT/SAT Prep</li><li>CS (Python)</li><li>etc. (upon request)</li></ul></div>
         </div>
 
@@ -137,13 +125,13 @@ body {
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="font-size: 24px">Interests</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Interests</a>
         </h4>
       </div>
       <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-body" style="font-size: 17px">As a college senior and soon to be graduate student, I am kept quite busy with my studies.
-          Tutoring is a passion, and I try and be as flexible and accomodating as possible. My typical availability is T/Th 4:30-6:30 pm, yet I
-        schedule accordingly to requests as well. My calendar of available dates is listed below.
+          <div class="panel-body">As a college senior and soon to be graduate student, I am kept quite busy with my studies.
+          Tutoring is a passion, and I try and be as flexible and accommodating as possible. My typical availability is T/Th 4:30-6:30 pm, yet I
+        schedule accordingly to requests as well. Please contact me directly for possible tutoring.
         <div>
          <!-- <iframe class="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23A79B8E&amp;ctz=America%2FChicago&amp;src=bjA3c25yaWU5NHJzNnBvMzd1ZjA0YjBmNDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0" style="border-width:0" frameborder="0" scrolling="no"></iframe> -->
         </div>
@@ -154,11 +142,11 @@ body {
 </body>
 
 
-<div style = "background-color: black; width: 100%; height: 2.5cm; position: absolute; bottom: 0cm">
-      <ul style="padding-left:.2cm; margin-bottom: -1.5cm; color: #f2ca79; margin-top: .5cm">
+<div class = "footer">
+      <ul class = "footer-list">
         <li><strong>Email: Kendallm@uchicago.edu</strong></li><li><strong>Phone: (423) 994-1834</strong></li><li><strong>Organization: University of Chicago</strong></li>
       </ul>
-      <ul class="icons" style = "margin-top 1cm;">
+      <ul class="icons">
         <li><a href="https://www.facebook.com/kendall.mehling.7" ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         <li><a href="https://www.instagram.com/kendallmehling/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         <li><a href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>

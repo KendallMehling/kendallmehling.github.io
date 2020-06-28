@@ -2,231 +2,317 @@
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kendall Mehling Home</title>
-    <link rel="stylesheet" href="stylesheets/typewriter.css">
-    <link rel="stylesheet" href="stylesheets/Social_Media_buttons.css">
-    <link rel="stylesheet" href = "stylesheets/menu_style.css">
-    <link rel="stylesheet" href="stylesheets/homepage-style.css">
+    <link rel="stylesheet" href="stylesheets/typewriter.css" />
+    <link rel="stylesheet" href="stylesheets/Social_Media_buttons.css" />
+    <link rel="stylesheet" href="stylesheets/menu_style.css" />
+    <link rel="stylesheet" href="stylesheets/homepage-style.css" />
 
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+    <link rel="stylesheet"
+    href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<style>
-  @import url('images/mountain.jpeg');
+  <style>
+      @import url('images/mountain.jpeg');
 
-  .header{
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    height:50vw;
-    min-height:400px;
-    max-height:550px;
-    min-width:300px;
-    color:#eee;
-  }
- 
-  .header:after{
-    content:"";
-    width:100%;
-    height:100%;
-    position:absolute;
-    bottom:0;
-    left:0;
-    z-index:-1;
-   background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
-  }
+      .header{
+        position:relative;
+        overflow:hidden;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        height:50vw;
+        min-height:400px;
+        max-height:550px;
+        min-width:300px;
+        color:#eee;
+      }
 
-@keyframes animatedBackground {
-  from {
-    background-position: 0 0;
-  }
+      .header:after{
+        content:"";
+        width:100%;
+        height:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index:-1;
+       background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+      }
 
-  to {
-    background-position: 0 -10000px;
-  }
-}
+    @keyframes animatedBackground {
+      from {
+        background-position: 0 0;
+      }
 
-  .header:before{
-    background-size: cover;
-    content:"";
-    width:100%;
-    height:200%;
-    position:absolute;
-    top:0;
-    left:0;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform: translateZ(0); backface-visibility: hidden;
-    scale(1.0, 1.0);
-      transform: translateZ(0);
-    background:#1B2030 url("images/mountain.jpeg") 100% 0;
-    /* background-repeat: repeat-y; */
-    background-size:100%;
-    background-attachment:fixed;
-    animation: grow 80s  linear infinite;
-    transition:all 0.4s ease-in-out;
-    z-index:-2;
-  }
-  .header a{
-    color:#eee
-  }
-  .sides, .info{
-    flex: 0 0 auto;
-    width:50%
-  }
-  .info{
-    top: -5cm;
-    width:100%;
-    padding:15% 10% 0 10%;
-    text-align:center;
-    font-size: 22px;
-    text-shadow:0 2px 3px rgba(0,0,0,0.2)
+      to {
+        background-position: 0 -10000px;
+      }
+    }
 
-  }
-  .author{
-    display:inline-block;
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    background:url("images/Kendall_full.png");
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size:cover;
-    box-shadow:0 2px 3px rgba(0,0,0,0.3);
-    margin-bottom:3px
-  }
-  .info h4, .meta{
-    font-size:0.9em
-  }
-  .meta{
-    font-style:italic;
-  }
-  @keyframes grow{
-    0% { transform: scale(1) translateY(0px)}
-    50% { transform: scale(1.2) translateY(-300px)}
-  }
-  .content{
-    padding:5% 10%;
-    text-align:justify;
+      .header:before{
+        background-size: cover;
+        content:"";
+        width:100%;
+        height:200%;
+        position:absolute;
+        top:0;
+        left:0;
+          -webkit-backface-visibility: hidden;
+          -webkit-transform: translateZ(0); backface-visibility: hidden;
+        scale(1.0, 1.0);
+          transform: translateZ(0);
+        background:#1B2030 url("images/mountain.jpeg") 100% 0;
+        /* background-repeat: repeat-y; */
+        background-size:100%;
+        background-attachment:fixed;
+        animation: grow 80s  linear infinite;
+        transition:all 0.4s ease-in-out;
+        z-index:-2;
+      }
+      .header a{
+        color:#eee
+      }
+      .sides, .info{
+        flex: 0 0 auto;
+        width:50%
+      }
+      .info{
+        top: -5cm;
+        width:100%;
+        padding:15% 10% 0 10%;
+        text-align:center;
+        font-size: 22px;
+        text-shadow:0 2px 3px rgba(0,0,0,0.2)
 
-  }
-  .btn{
-    height: 40px;
-    width: 100px;
-    color: black;
-    border:2px solid;
-    border-radius:3px;
-    /* margin-right: 1cm; */
-    text-decoration:none;
-    display:inline-block;
-    padding:5px 10px;
-    font-weight:600;
-  }
+      }
+      .author{
+        display:inline-block;
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        background:url("images/Kendall_full.png");
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size:cover;
+        box-shadow:0 2px 3px rgba(0,0,0,0.3);
+        margin-bottom:3px
+      }
+      .info h4, .meta{
+        font-size:0.9em
+      }
+      .meta{
+        font-style:italic;
+      }
+      @keyframes grow{
+        0% { transform: scale(1) translateY(0px)}
+        50% { transform: scale(1.2) translateY(-300px)}
+      }
+      .content{
+        padding:5% 10%;
+        text-align:justify;
 
-  .twtr{
-    margin-top:100px
-  }.btn.twtr:after{content:"\1F426";padding-left:5px}
+      }
+      .btn{
+        height: 40px;
+        width: 100px;
+        color: black;
+        border:2px solid;
+        border-radius:3px;
+        /* margin-right: 1cm; */
+        text-decoration:none;
+        display:inline-block;
+        padding:5px 10px;
+        font-weight:600;
+      }
 
-
-
-p {
-  text-align: left;
-  font-size: 20px;
-  font-family: Arial;
-}
-
-
-body {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-</style>
-
-<script>
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
-
-</script>
-
-<script>
-  function openNav() {
-    document.getElementById("mySidepanel").style.width = "150px";
-  }
-
-  /* Set the width of the sidebar to 0 (hide it) */
-  function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-  }
-</script>
+      .twtr{
+        margin-top:100px
+      }.btn.twtr:after{content:"\1F426";padding-left:5px}
 
 
-<header class="header continer-fluid">
-  <button class="btn" style="position: absolute; right: 0"onclick="myFunction()">Dark Mode</button>
-  <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="About_me.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="tutoring.html">Tutoring</a>
-  </div>
 
-  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    p {
+      text-align: left;
+      font-size: 20px;
+      font-family: Arial;
+    }
 
-  <div class="info">
-    <div class="meta">
-      <a  href="https://www.linkedin.com/in/kendall-mehling-7208b0160/" target="_b" class="author"></a><br>
-      By <a href="https://www.linkedin.com/in/kendall-mehling-7208b0160/" target="_b">Kendall Mehling</a>
-      <br>
-      Updated: June 25th, 2020
-      <br>
-      Uchicago Senior | Physics & Mathematics
+
+    body {
+      background-color: white;
+      color: black;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    .footer{
+      background-color: black;
+    }
+    .footer-gray{
+      background-color: hotpink;
+    }
+  </style>
+
+  <script>
+    function myFunction() {
+      var body = document.body;
+      var footer = document.footer;
+      body.classList.toggle("dark-mode");
+      footer.classList.toggle("footer-gray");
+    }
+  </script>
+
+  <script>
+    function openNav() {
+      var x = window.matchMedia("(max-width: 450px)");
+      if (x.matches) {
+        document.getElementById("mySidepanel").style.width = "80px";
+      } else {
+        document.getElementById("mySidepanel").style.width = "150px";
+      }
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+  </script>
+
+  <header class="header container-fluid">
+    <button
+      class="btn"
+      style="position: absolute; right: 0;"
+      onclick="myFunction()"
+    >
+      Dark Mode
+    </button>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="index.html">Home</a>
+      <a href="About_me.html">About Me</a>
+      <!-- <a href="resume.html">Resume</a> -->
+      <a href="tutoring.html">Tutoring</a>
     </div>
-  </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+    <div class="info">
+      <div class="meta">
+        <a
+          href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"
+          target="_b"
+          class="author"
+        ></a
+        ><br />
+        By
+        <a
+          href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"
+          target="_b"
+          >Kendall Mehling</a
+        >
+        <br />
+        Updated: June 25th, 2020
+        <br />
+        UChicago Senior | Physics & Mathematics
+      </div>
+    </div>
     <div class="typewriter">
-      <h1> Physicist | Mathematician | Developer</h1>
+      <h1>Physicist | Mathematician | Developer</h1>
     </div>
-</header>
-<body>
-<div class="container-fluid">
-  <section class="content">
-    <strong><p > I aspire to be a quantum engineer, working toward the next breakthrough in modern computing. Following graduation, I plan on studying the frontier of quantum physics
-      at the University of Colorado at Boulder. While my primary focus is Quantum and A.M.O (Atomic Molecular Optics) physics, I am also greatly interested
-      in mathematics and computer science. I love learning and appreciate the ability to teach. To me, science is fascinatinating. It lies at the center of my studies,
-      side projects, and ambitions. </p></strong>
-      <br>
-      <br>
+  </header>
+  <body>
+    <div class="container-fluid">
+      <section
+        class="content"
+        style="width: 70%; margin-left: 15%; text-align: left;"
+      >
+        <strong
+          ><p>
+            I aspire to be a quantum engineer, working toward the next
+            breakthrough in modern computing. Following graduation, I plan on
+            studying the frontier of quantum physics at the University of
+            Colorado at Boulder. While my primary focus is Quantum and A.M.O
+            (Atomic Molecular Optics) physics, I am also greatly interested in
+            mathematics and computer science. I love learning and appreciate the
+            ability to teach. To me, science is fascinating. It lies at the
+            center of my studies, side projects, and ambitions. This website
+            ideally serves as an introduction to me as both a scientist and a
+            person. Like all things, my projects, interests, and this site
+            itself are a work in progress, and I am happy to receive feedback or
+            questions.
+          </p></strong
+        >
+        <br />
+        <br />
+      </section>
+    </div>
 
-    </section>
-</div>
-
-
-<div style = "background-color: black; width: 100%; height: 2.5cm; position: sticky; bottom: 0cm">
-      <ul style=" padding-top: .4cm; padding-left:.2cm; margin-bottom: -1.5cm; color: #f2ca79; margin-top: .5cm">
-        <li><strong>Email: Kendallm@uchicago.edu</strong></li><li><strong>Phone: (423) 994-1834</strong></li><li><strong>Organization: University of Chicago</strong></li>
+    <div
+      class="footer"
+      style="
+        width: 100%;
+        height: 2.5cm;
+        position: sticky;
+        bottom: 0cm;
+        font-size: 16px;
+      "
+    >
+      <ul
+        style="
+          padding-top: 0.4cm;
+          padding-left: 0.2cm;
+          margin-bottom: -1.5cm;
+          color: #f2ca79;
+          margin-top: 0.5cm;
+        "
+      >
+        <li><strong>Email: Kendallm@uchicago.edu</strong></li>
+        <li><strong>Phone: (423) 994-1834</strong></li>
+        <li><strong>Organization: University of Chicago</strong></li>
       </ul>
-      <ul class="icons" style = "margin-top 1cm;">
-        <li><a href="https://www.facebook.com/kendall.mehling.7" ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/kendallmehling/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/KendallMehling"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+      <ul class="icons" style="margin-top 1cm;">
+        <li>
+          <a href="https://www.facebook.com/kendall.mehling.7"
+            ><i class="fa fa-facebook" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/kendallmehling/?hl=en"
+            ><i class="fa fa-instagram" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/kendall-mehling-7208b0160/"
+            ><i class="fa fa-linkedin" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/KendallMehling"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+        </li>
       </ul>
-</div>
-</body>
-
+    </div>
+  </body>
 </html>

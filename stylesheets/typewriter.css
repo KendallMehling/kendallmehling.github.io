@@ -1,28 +1,35 @@
-.typewriter h1{
+.typewriter h1 {
   position: absolute;
-  top: 85%;
-  left: 18%;
-  font-size: 3.4vw;
+  top: 90%;
+  left: 27%;
+  font-size: 2vw;
   width: auto;
   font-family: monospace;
   align: center;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: 0.15em solid orange;
   white-space: nowrap;
   color: yellow;
   letter-spacing: auto;
-  animation:
-    typing 3.5s steps(60, end),
-    blink-caret .75s step-end infinite;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
   /* animation-iteration-count:1; */
 }
 
 @keyframes typing {
-  from {width: 0}
-  to {width: 18em}
+  from {
+    width: 0;
+  }
+  to {
+    width: 18em;
+  }
 }
 
 @keyframes blink-caret {
-  from, to {border-color: transparent}
-  50% { border-color: yellow}
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: yellow;
+  }
 }

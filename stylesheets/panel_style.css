@@ -1,0 +1,55 @@
+.panel-default {
+  border-color: transparent;
+}
+
+.panel {
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1%;
+  margin-left: 1.7cm;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+}
+
+.panel-title {
+  color: white;
+  position: relative;
+  left: 20%;
+  margin-bottom: 0.25cm;
+  margin-top: 0.5cm;
+  width: 60%;
+  font-size: 24px;
+}
+
+.panel-body {
+  color: white;
+  position: relative;
+  width: 60%;
+  left: 17%;
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 700px) {
+  .panel-title{
+  color: white;
+  font-size: 16px !important;
+  position: relative;
+  left: 20%;
+  margin-bottom: .25cm;
+  margin-top: .5cm;
+  width: 60%;
+  }
+
+  .panel-body{
+      color: white;
+      position: relative;
+      width: 60%;
+      left: 5%;
+      font-size: 12px;
+  }
